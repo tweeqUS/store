@@ -10,140 +10,18 @@
   display: grid;
   grid-template-areas:
     'h h'
-    'n c';
-    
-  grid-template-rows: 80px 1fr;
-  grid-template-columns: 2fr 10fr;
+    'n c'
+    'f f';
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 2fr 12fr;
   /* grid-gap: 10px; */
 }
 
-.header {
-  grid-area: h;
-  background-color: aquamarine;
-  display: flex;
-  align-items: center;
-}
-
-.header img {
-  padding-left: 1em;
-}
-
-.header h1 {
-  padding-left: 1em;
-  color:rgb(205, 90, 190, 0.8);
-}
-
-.header img {
-  width: 70px;
-}
-
-.nav {
-  grid-area: n;
-  background-color: yellow;
-}
-
-.nav a {
-  font-size: 40px;
-  margin-left: 1em;
-  text-decoration: none;
-  color: blueviolet;
-  line-height: 1.5em;
-}
-
-.content {
+.app-wrapper-content {
   grid-area: c;
-  background-color: azure;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  background-color: rgb(47, 243, 243);
 }
 
-.searсh {
-  display: flex;
-  justify-content: center;
-  padding: 0.5em 0 0.5em 0;
-}
 
-.searсh input {
-  width: 50%;
-  height: 40px;
-  outline: none;
-  border: 3px inset violet;
-  font-size: 24px;
-  color: black;
-}
 
-.searсh button {
-  margin-left: 0.5em;
-  width: 5%;
-  font-size: 20px;
-}
 
-.case {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: 0.3em;
-}
-
-.case img {
-  border-radius: 8px;
-}
-
-.case-1 {
-  width: 30%;
-  height: 400px;
-  background-color: silver;
-}
-
-.case-2 {
-  width: 30%;
-  height: 400px;
-  background-color: saddlebrown;
-}
-
-.case-3 {
-  width: 30%;
-  height: 400px;
-  background-color: salmon;
-}
-
-.case-4 {
-  width: 30%;
-  height: 400px;
-  background-color: sandybrown;
-}
-
-.case-5 {
-  width: 30%;
-  height: 400px;
-  background-color: seagreen;
-}
-
-.case-6 {
-  width: 30%;
-  height: 400px;
-  background-color: slateblue;
-}
-
-.case-7 {
-  width: 30%;
-  height: 400px;
-  background-color: rgb(90, 205, 134);
-}
-
-.case-8 {
-  width: 30%;
-  height: 400px;
-  background-color: rgb(231, 137, 28);
-}
-
-.case-9 {
-  width: 30%;
-  height: 400px;
-  background-color: rgb(205, 90, 190);
-}
-
-.footer {
-  grid-area: f;
-}

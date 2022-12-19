@@ -1,0 +1,87 @@
+.our_cases {
+        grid-area: c;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+}
+.case {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0.3em;
+    color: rgb(39, 99, 230);
+}
+
+.case img {
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.case img:hover {
+    transition: 0.5s;
+    transform: scale(1.2)
+
+}
+
+.case_price {
+    color: rgb(6, 180, 73);
+}
+
+
+
+/* case */
+.case_1 {
+    width: 30%;
+    height: 400px;
+    background-color: silver;
+}
+
+.case_2 {
+    width: 30%;
+    height: 400px;
+    background-color: saddlebrown;
+}
+
+.case_3 {
+    width: 30%;
+    height: 400px;
+    background-color: salmon;
+}
+
+.case_4 {
+    width: 30%;
+    height: 400px;
+    background-color: sandybrown;
+}
+
+.case_5 {
+    width: 30%;
+    height: 400px;
+    background-color: seagreen;
+}
+
+.case_6 {
+    width: 30%;
+    height: 400px;
+    background-color: slateblue;
+}
+
+.case_7 {
+    width: 30%;
+    height: 400px;
+    background-color: rgb(90, 205, 134);
+}
+
+.case_8 {
+    width: 30%;
+    height: 400px;
+    background-color: rgb(231, 137, 28);
+}
+
+.case_9 {
+    width: 30%;
+    height: 400px;
+    background-color: rgb(205, 90, 190);
+}
+
+/* case */
