@@ -1,17 +1,18 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import s from './Navbar.module.css'
 
 
 const Navbar = () => {
-    return (
-        <nav className={s.nav}>
-        <div><a className={s.item} href='/'>Товары</a></div>
-        <div><a className={s.item} href='/'>Акции</a></div>
-        <div><a className={s.item} href='/'>Оплата</a></div>
-        <div><a className={s.item} href='/'>Доставка</a></div>
-        <div><a className={s.item} href='/'>Контакты</a></div>
-      </nav>
-    )
+  return (
+    <nav className={s.nav}>
+      <div className={s.item}><NavLink to='/cases'>Товары</NavLink></div>
+      <div className={s.item}><NavLink to='/stock'>Акции</NavLink></div>
+      <div className={s.item}><NavLink to='/payment'>Оплата</NavLink></div>
+      <div className={s.item}><NavLink to='/delivery'>Доставка</NavLink></div>
+      <div className={s.item}><NavLink to='/contacts'>Контакты</NavLink></div>
+    </nav>
+  )
 }
 
 export default Navbar;

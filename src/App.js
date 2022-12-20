@@ -1,23 +1,35 @@
 import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Cases from './components/Cases/Cases';
+import { Contacts } from './components/Contacts/Contacts';
+import { Delivery } from './components/Delivery/Delivery';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
-import Products from './components/Products/Products';
+import { Payment } from './components/Payment/Payment';
+import Products from './components/Stock/Stock';
 
 
 function App() {
   return (
-    <div className='app-wrapper'>
-      <Header/>
-      <Navbar/>
-      {/* <Cases/> */}
-      <div className='app-wrapper-content'>
-      <Products/>
+    <BrowserRouter>
+      <div className='app-wrapper'>
+        <Header />
+        <Navbar />
+        <div className='app-wrapper-content'>
+          <Routes>
+            <Route path='/' element={<Cases />} />
+            <Route path='/cases' element={<Cases />} />
+            <Route path='/stock' element={<Products />} />
+            <Route path='/payment' element={<Payment/>} />
+            <Route path='/delivery' element={<Delivery/>}/>
+            <Route path='/contacts' element={<Contacts/>}/>
+          </Routes>
+        </div>
+        <Footer />
       </div>
-      <Footer/>
-    </div>
+    </BrowserRouter>
   );
 }
 
