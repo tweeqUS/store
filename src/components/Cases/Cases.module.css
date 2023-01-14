@@ -1,3 +1,6 @@
 .cases {
-    background-color: rgb(47, 243, 243);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(32, 104, 248);
+    border-radius: 0.3em;
+    margin: 0 1em 1em 1em;
 }

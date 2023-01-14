@@ -1,20 +1,38 @@
 .header {
-    grid-area: h;
-    background-color: aquamarine;
-    display: flex;
-    align-items: center;
-  }
-  
-  .header img {
-    padding-left: 1em;
-  }
-  
-  .header h1 {
-    padding-left: 1em;
-    color:rgb(205, 90, 190, 0.8);
-  }
-  
-  .header img {
-    width: 80px;
-    margin: 5px;
-  }
+  grid-area: h;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  /* border-bottom: 2px solid rgb(32, 104, 248); */
+}
+
+
+
+.header h1 {
+  padding-left: 1em;
+  color: rgb(32, 104, 248);
+}
+
+.logo {
+  width: 80px;
+  margin: 5px;
+  padding-left: 1em;
+}
+
+.cart {
+  height: 2.5em;
+  position: relative;
+  ;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  height: 2em;
+  color: rgb(32, 104, 248);
+  font-size: 20px;
+  background-color: rgb(0, 0, 0, 0);
+  border: 1px solid rgb(32, 104, 248);
+  border-radius: 0.3em;
+  cursor: pointer;
+}

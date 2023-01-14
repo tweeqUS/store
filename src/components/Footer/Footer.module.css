@@ -1,7 +1,11 @@
 .footer {
     grid-area: f;
-    background-color: wheat;
-    padding: 2em;
+    background-color: rgb(255, 255, 255);
+    border-left: 2px solid rgb(32, 104, 248);
+    border-top: 2px solid rgb(32, 104, 248);
+    border-right: 2px solid rgb(32, 104, 248);
+    border-radius: 0.3em 0.3em 0 0;
+    margin: 0 1em 0 1em;
     display: flex;
     align-items: center;
     justify-content: space-around;

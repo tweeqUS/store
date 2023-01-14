@@ -1,87 +1,74 @@
 .our_cases {
-        grid-area: c;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-}
-.case {
+    grid-area: c;
     display: flex;
+    justify-content: center;
+    column-gap: 32px;
+    row-gap: 47px;
+    flex-wrap: wrap;
+}
+
+.case {
+    /* display: flex;
     align-items: center;
     flex-direction: column;
     margin: 0.3em;
-    color: rgb(39, 99, 230);
+    color: rgb(39, 99, 230); */
+    width: 303px;
+    border: 3px solid #F6F7F8;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.case h1 {
+    font-size: 16px;
+    text-align: center;
+    margin: 1em;
 }
 
 .case img {
-    border-radius: 8px;
-    transition: 0.5s;
+    height: 273px;
+    object-fit: contain;
+    padding: 20px;
 }
 
 .case img:hover {
     transition: 0.5s;
-    transform: scale(1.2)
-
+    transform: scale(1.1)
 }
 
-.case_price {
-    color: rgb(6, 180, 73);
+.case .case_price {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: #2068F8;
+    margin-bottom: 30px;
 }
+
+.case button {
+    background-color: white;
+    border: 1px solid #2068F8;
+    border-radius: 2px;
+    padding: 10px 0;
+    width: 80%;
+    color: #2068F8;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    align-self: center;
+    margin-bottom: 36px;
+    cursor: pointer;
+  }
 
 
 
 /* case */
 .case_1 {
     width: 30%;
-    height: 400px;
-    background-color: silver;
+    height: 400px auto;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 0.3em;
 }
 
-.case_2 {
-    width: 30%;
-    height: 400px;
-    background-color: saddlebrown;
-}
-
-.case_3 {
-    width: 30%;
-    height: 400px;
-    background-color: salmon;
-}
-
-.case_4 {
-    width: 30%;
-    height: 400px;
-    background-color: sandybrown;
-}
-
-.case_5 {
-    width: 30%;
-    height: 400px;
-    background-color: seagreen;
-}
-
-.case_6 {
-    width: 30%;
-    height: 400px;
-    background-color: slateblue;
-}
-
-.case_7 {
-    width: 30%;
-    height: 400px;
-    background-color: rgb(90, 205, 134);
-}
-
-.case_8 {
-    width: 30%;
-    height: 400px;
-    background-color: rgb(231, 137, 28);
-}
-
-.case_9 {
-    width: 30%;
-    height: 400px;
-    background-color: rgb(205, 90, 190);
-}
 
 /* case */

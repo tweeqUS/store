@@ -1,6 +1,9 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Navigate } from "react-router-dom";
 import s from './Case.module.css'
-import classNames from 'classnames';
+
+// import classNames from 'classnames';
 
 const Case = (props) => {
     // let [counter, setCounter] = useState(0);
@@ -8,16 +11,35 @@ const Case = (props) => {
     //     setCounter(++counter);
     //   };
 
+    const [products, setProducts] = useState([])
+
+    useEffect(() => {
+        const promise = axios.get("https://fakestoreapi.com/products")
+        promise.then((res) => {
+            const products = res.data;
+            setProducts(products)
+        });
+    }, []);
+
+    const showMoreHandler = (id) => {
+        Navigate(`/product/${id}`)
+    }
     return (
         <div className={s.our_cases}>
             {props.message}
-            <div className={`${s.case} ${s.case_1}`}>
-                <h1>{props.title}</h1>
-                <img src={props.image} alt='img'></img>
-                <h3>{props.descr}</h3>
-                <h4 className={s.case_price}>{props.price}</h4>
-            </div>
-            <div className={classNames(s.case, s.case_2)}>
+            {products.map((el) => {
+                return (
+                    <div className={`${s.case} ${s.case_1}`}>
+                        <h1>{el.title}</h1>
+                        <img src={el.image} alt='img'></img>
+                        {/* <h3>{el.description}</h3> */}
+                        <h4 className={s.case_price}>${el.price}</h4>
+                        <button onClick={()=> showMoreHandler(el.id)}>show more</button>
+                    </div>
+                )
+            })}
+
+            {/* <div className={classNames(s.case, s.case_2)}>
                 <h1>Товар</h1>
                 <img src='http://zornet.ru/_fr/81/7704636.jpg' alt='img'></img>
                 <h3>Описание</h3>
@@ -64,7 +86,7 @@ const Case = (props) => {
                 <img src='http://zornet.ru/_fr/81/9601951.jpg' alt='img'></img>
                 <h3>Описание</h3>
                 <h4 className={s.case_price}>Стоимость</h4>
-            </div>
+            </div> */}
         </div>
     )
 }

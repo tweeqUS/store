@@ -8,13 +8,17 @@
     width: 50%;
     height: 40px;
     outline: none;
-    border: 3px inset violet;
+    border: 1px inset rgb(109, 189, 255);
     font-size: 24px;
-    color: black;
+    color: rgb(32, 104, 248);
 }
 
 .searсh button {
     margin-left: 0.5em;
     width: 4em;
     font-size: 20px;
+    background: rgb(109, 189, 255, 0);
+    color: rgb(32, 104, 248);
+    border: 1px solid rgb(109, 189, 255);
+    cursor: pointer;
 }

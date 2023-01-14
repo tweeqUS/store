@@ -1,16 +1,20 @@
 .nav {
     grid-area: n;
-    background-color: rgb(163, 125, 1);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(32, 104, 248);
+    border-radius: 0.3em;
+    margin: 0 0 1em 1em;
+    height: 100vh;
 }
 
 .item {
     font-size: 40px;
-    margin-left: 0.5em;
 }
 
 .item a {
+    margin-left: 0.5em;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(32, 104, 248);
     line-height: 1.5em;
 }
 
@@ -18,4 +22,5 @@
     color: blanchedalmond;
     padding-left: 5px;
     transition: 0.5s;
+    background-color: rgb(32, 104, 248, .1);
 }
