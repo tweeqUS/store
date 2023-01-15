@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import s from './Case.module.css'
 
 // import classNames from 'classnames';
@@ -12,6 +12,7 @@ const Case = (props) => {
     //   };
 
     const [products, setProducts] = useState([])
+    const navigate = useNavigate()
 
     useEffect(() => {
         const promise = axios.get("https://fakestoreapi.com/products")
@@ -22,19 +23,19 @@ const Case = (props) => {
     }, []);
 
     const showMoreHandler = (id) => {
-        Navigate(`/product/${id}`)
+        navigate(`product/${id}`)
+        console.log(id);
     }
     return (
         <div className={s.our_cases}>
             {props.message}
             {products.map((el) => {
                 return (
-                    <div className={`${s.case} ${s.case_1}`}>
+                    <div className={`${s.case} ${s.case_1}`} key={el.id}>
                         <h1>{el.title}</h1>
                         <img src={el.image} alt='img'></img>
-                        {/* <h3>{el.description}</h3> */}
                         <h4 className={s.case_price}>${el.price}</h4>
-                        <button onClick={()=> showMoreHandler(el.id)}>show more</button>
+                        <button onClick={() => showMoreHandler(el.id)}>show more</button>
                     </div>
                 )
             })}
